@@ -130,7 +130,7 @@ export default function Home() {
               lineHeight: "1.6",
             }}
           >
-            Military-grade encrypted document storage powered by Starknet.
+            Secure, verify, and protect your important documents with AI-powered authenticity checks and decentralized blockchain storage. StarkVault ensures that every file you upload is genuine, tamper-proof, and permanently accessible giving you complete ownership and trust powered by StarkNet.
           </p>
 
           <form onSubmit={submit}>
