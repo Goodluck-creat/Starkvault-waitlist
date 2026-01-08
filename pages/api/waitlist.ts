@@ -28,7 +28,7 @@ export default async function handler(
     if (error.code === "23505") {
       // Postgres duplicate key error
       return res.status(409).json({
-        message: "This email is already on the wait-list 👀",
+        message: "This email is already on the wait-list ",
       });
     }
 
@@ -38,6 +38,6 @@ export default async function handler(
   }
 
   return res.status(200).json({
-    message: "You’ve joined the StarkVault wait-list 🚀",
+    message: "You’ve joined the StarkVault wait-list ",
   });
 }
