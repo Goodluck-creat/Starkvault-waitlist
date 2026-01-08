@@ -190,7 +190,7 @@ export default function Home() {
           >
            Encrypted • Starknet
             <br />
-            Beta Access Only
+           
           </p>
         </div>
       </div>
