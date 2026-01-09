@@ -24,113 +24,135 @@ export default function Home() {
 
   return (
     <>
-      {/* ANIMATIONS */}
       <style>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
+        body {
+          margin: 0;
         }
 
-        @keyframes glow {
-          0% { box-shadow: 0 0 10px rgba(63,169,245,0.3); }
-          50% { box-shadow: 0 0 25px rgba(63,169,245,0.6); }
-          100% { box-shadow: 0 0 10px rgba(63,169,245,0.3); }
+        .bg {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: radial-gradient(circle at top right, #3b0a45, #05010a 60%);
+          color: #fff;
+          font-family: Inter, Arial, sans-serif;
+          padding: 20px;
+        }
+
+        .container {
+          max-width: 520px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .star {
+          font-size: 22px;
+          margin-bottom: 20px;
+          opacity: 0.9;
+        }
+
+        h1 {
+          font-size: 42px;
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+
+        .subtitle {
+          color: #b6b6c9;
+          font-size: 15px;
+          margin-bottom: 36px;
+          line-height: 1.6;
+        }
+
+        form {
+          display: flex;
+          background: rgba(255,255,255,0.05);
+          border-radius: 12px;
+          padding: 6px;
+          backdrop-filter: blur(10px);
+        }
+
+        input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          padding: 14px;
+          color: white;
+          font-size: 14px;
+          outline: none;
+        }
+
+        input::placeholder {
+          color: #9ca3af;
+        }
+
+        button {
+          background: white;
+          color: black;
+          border: none;
+          padding: 0 22px;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        button:hover {
+          transform: translateY(-1px);
+          opacity: 0.9;
+        }
+
+        .msg {
+          margin-top: 16px;
+          font-size: 14px;
+          color: #a5b4fc;
+        }
+
+        .socials {
+          margin-top: 48px;
+          display: flex;
+          justify-content: center;
+          gap: 18px;
+          opacity: 0.7;
+        }
+
+        .socials span {
+          cursor: pointer;
+          font-size: 18px;
+          transition: opacity 0.2s ease;
+        }
+
+        .socials span:hover {
+          opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+          h1 {
+            font-size: 34px;
+          }
+
+          form {
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          button {
+            width: 100%;
+            padding: 14px;
+          }
         }
       `}</style>
 
-      <div
-        style={{
-          minHeight: "100vh",
-          backgroundImage:
-            "url('logo.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "20px",
-          fontFamily: "Arial, sans-serif",
-        }}
-      >
-        {/* OVERLAY */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(135deg, rgba(11,42,74,0.85), rgba(0,0,0,0.85))",
-          }}
-        />
+      <div className="bg">
+        <div className="container">
+          <div className="star">✦</div>
 
-        {/* FLOATING ICONS */}
-        {[
-          { icon: "🔐", top: "15%", left: "10%" },
-          { icon: "🗝️", top: "25%", right: "12%" },
-          { icon: "📁", bottom: "20%", left: "15%" },
-          { icon: "🛡️", bottom: "25%", right: "10%" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            style={{
-              position: "absolute",
-              fontSize: "28px",
-              opacity: 0.8,
-              animation: "float 6s ease-in-out infinite",
-              animationDelay: `${i}s`,
-              ...item,
-            }}
-          >
-            {item.icon}
-          </div>
-        ))}
+          <h1>Coming Soon</h1>
 
-        {/* CARD */}
-        <div
-          style={{
-            position: "relative",
-            background: "rgba(255,255,255,0.08)",
-            backdropFilter: "blur(12px)",
-            padding: "36px",
-            borderRadius: "22px",
-            maxWidth: "420px",
-            width: "100%",
-            textAlign: "center",
-            color: "#fff",
-            animation: "glow 4s infinite",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "38px",
-              fontWeight: "bold",
-              color: "#ffffff",
-              marginBottom: "6px",
-            }}
-          >
-            StarkVault
-          </h1>
-
-          <p
-            style={{
-              color: "#3FA9F5",
-              marginBottom: "16px",
-              fontWeight: "600",
-            }}
-          >
-            Decentralized Vault
-          </p>
-
-          <p
-            style={{
-              fontSize: "15px",
-              color: "#D1D5DB",
-              marginBottom: "24px",
-              lineHeight: "1.6",
-            }}
-          >
-            Secure, verify, and protect your important documents with AI-powered authenticity checks and decentralized blockchain storage. StarkVault ensures that every file you upload is genuine, tamper-proof, and permanently accessible giving you complete ownership and trust powered by StarkNet.
+          <p className="subtitle">
+            StarkVault is building a secure, decentralized vault for encrypted
+            document storage on Starknet. Be the first to know when we launch.
           </p>
 
           <form onSubmit={submit}>
@@ -139,59 +161,22 @@ export default function Home() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              style={{
-                width: "100%",
-                padding: "14px",
-                borderRadius: "12px",
-                border: "none",
-                marginBottom: "16px",
-                outline: "none",
-                fontSize: "14px",
-              }}
+              placeholder="Email address"
             />
 
-            <button
-              disabled={loading}
-              style={{
-                width: "100%",
-                padding: "14px",
-                borderRadius: "16px",
-                border: "none",
-                background: "#1F6AE1",
-                color: "#fff",
-                fontWeight: "bold",
-                cursor: loading ? "not-allowed" : "pointer",
-                transition: "transform 0.2s ease",
-              }}
-            >
-              {loading ? "Securing Spot..." : "Join Secure Wait-list"}
+            <button disabled={loading}>
+              {loading ? "Please wait..." : "Notify Me"}
             </button>
           </form>
 
-          {msg && (
-            <p
-              style={{
-                marginTop: "14px",
-                fontSize: "14px",
-                color: "#93C5FD",
-              }}
-            >
-              {msg}
-            </p>
-          )}
+          {msg && <div className="msg">{msg}</div>}
 
-          <p
-            style={{
-              marginTop: "24px",
-              fontSize: "12px",
-              color: "#9CA3AF",
-            }}
-          >
-           Encrypted • Starknet
-            <br />
-           
-          </p>
+          <div className="socials">
+            <span>in</span>
+            <span>𝕏</span>
+            <span>◎</span>
+            <span>🌐</span>
+          </div>
         </div>
       </div>
     </>
