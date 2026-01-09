@@ -162,12 +162,20 @@ export default function Home() {
           background: url("control.jpg") center/cover no-repeat;
         }
 
-        .banner::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          
-        }
+       .banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("control.jpg");
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: overlay;
+}
 
         .banner-text {
           position: relative;
