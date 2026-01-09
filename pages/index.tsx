@@ -159,7 +159,7 @@ export default function Home() {
           margin-top: 100px;
           height: 300px;
           position: relative;
-          background: url("/images/control-data.jpg") center/cover no-repeat;
+          background: url("../control.jpg") center/cover no-repeat;
         }
 
         .banner::after {
