@@ -162,20 +162,13 @@ export default function Home() {
           background: url("control.jpg") center/cover no-repeat;
         }
 
-       .banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("control.jpg");
-  background-size: cover;
-  background-position: center;
-  mix-blend-mode: overlay;
-}
+        // .banner::after {
+        //   content: "";
+        //   position: absolute;
+        //   inset: 0;
+        //   background: rgba(0,0,0,0.6);
+        //   backdrop-filter: blur(2px);
+        // }
 
         .banner-text {
           position: relative;
@@ -268,54 +261,9 @@ export default function Home() {
         </div>
 
         {/* BANNER */}
-        <div
-  className="banner"
-  style={{
-    position: "relative",
-    width: "100%",
-    height: "260px",
-    marginTop: "80px",
-    borderRadius: "18px",
-    overflow: "hidden",
-    backgroundImage: "url('control.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Overlay */}
-  {/* <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background:
-        "linear-gradient(rgba(5,1,10,0.65), rgba(5,1,10,0.65)), url('control.jpg')",
-      backgroundSize: "cover",
-      backdropFilter: "blur(2px)",
-    }}
-  /> */}
-
-  {/* Text */}
-  <div
-    className="banner-text"
-    style={{
-      position: "relative",
-      zIndex: 2,
-      height: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "#fff",
-      fontSize: "28px",
-      fontWeight: 700,
-      letterSpacing: "0.5px",
-      textAlign: "center",
-      padding: "0 16px",
-    }}
-  >
-    Control over your data
-  </div>
-</div>
-
+        <div className="banner">
+          <div className="banner-text">Control over your data</div>
+        </div>
 
         {/* X ONLY */}
         <div className="x">
