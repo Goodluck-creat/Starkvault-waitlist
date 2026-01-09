@@ -277,7 +277,7 @@ export default function Home() {
     marginTop: "80px",
     borderRadius: "18px",
     overflow: "hidden",
-    backgroundImage: "url('/images/vault-banner.jpg')",
+    backgroundImage: "url('pages/control.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
@@ -288,7 +288,7 @@ export default function Home() {
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(), url('pages/control.jpg')",
+        "linear-gradient(rgba(5,1,10,0.65), rgba(5,1,10,0.65)), url('pages/control.jpg')",
       backgroundSize: "cover",
       backdropFilter: "blur(2px)",
     }}
