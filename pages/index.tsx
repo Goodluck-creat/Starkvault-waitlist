@@ -227,7 +227,7 @@ export default function Home() {
           <h1>Coming Soon</h1>
 
           <p className="subtitle">
-            StarkVault is building a secure, decentralized vault for encrypted
+            StarkVault is a secure, decentralized vault for encrypted
             document storage on StarkNet. Be the first to know when we launch.
           </p>
 
