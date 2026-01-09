@@ -288,7 +288,7 @@ export default function Home() {
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(rgba(5,1,10,0.65), rgba(5,1,10,0.65)), url('control.jpg')",
+        "linear-gradient(rgba(5,1,10,0.65), rgba(5,1,10,0.65)), url('pages/control.jpg')",
       backgroundSize: "cover",
       backdropFilter: "blur(2px)",
     }}
