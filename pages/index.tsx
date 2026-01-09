@@ -162,11 +162,7 @@ export default function Home() {
          background: url("public/control.jpg") center/cover no-repeat;
        }
 
-        .banner::after {
-           content: "";
-           position: absolute;
-           inset: 0;
-           
+        
          
        }
 
