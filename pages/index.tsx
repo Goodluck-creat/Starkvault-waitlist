@@ -283,7 +283,7 @@ export default function Home() {
   }}
 >
   {/* Overlay */}
-  <div
+  {/* <div
     style={{
       position: "absolute",
       inset: 0,
@@ -292,7 +292,7 @@ export default function Home() {
       backgroundSize: "cover",
       backdropFilter: "blur(2px)",
     }}
-  />
+  /> */}
 
   {/* Text */}
   <div
