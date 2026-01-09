@@ -155,12 +155,12 @@ export default function Home() {
         }
 
         /* IMAGE BANNER */
-        .banner {
-          margin-top: 100px;
-          height: 300px;
-          position: relative;
-          background: url("control.jpg") center/cover no-repeat;
-        }
+        // .banner {
+        //   margin-top: 100px;
+        //   height: 300px;
+        //   position: relative;
+        //   background: url("control.jpg") center/cover no-repeat;
+        // }
 
         // .banner::after {
         //   content: "";
