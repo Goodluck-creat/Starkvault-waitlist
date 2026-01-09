@@ -155,26 +155,20 @@ export default function Home() {
         }
 
         /* IMAGE BANNER */
-.banner {
-  margin-top: 100px;
-  height: 300px;
-  position: relative;
-  background: url("/control.jpg") center / cover no-repeat;
-  border-radius: 18px;
-  overflow: hidden;
-}
+        .banner {
+          margin-top: 100px;
+          height: 300px;
+          position: relative;
+          background: url("/control.jpg") center/cover no-repeat;
+        }
 
-/* Subtle overlay */
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* slight dark overlay */
-}
-
-        
-         
-       
+        .banner::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.6);
+          backdrop-filter: blur(2px);
+        }
 
         .banner-text {
           position: relative;
