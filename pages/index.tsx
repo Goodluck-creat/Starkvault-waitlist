@@ -39,21 +39,7 @@ export default function Home() {
           overflow-x: hidden;
         }
 
-        /* FLOATING BACKGROUND ICONS */
-        .float {
-          position: absolute;
-          color: rgba(255,255,255,0.08);
-          animation: float 10s ease-in-out infinite;
-        }
-
-        .float.one { top: 15%; left: 10%; font-size: 28px; }
-        .float.two { top: 60%; right: 12%; font-size: 22px; animation-delay: 3s; }
-        .float.three { bottom: 20%; left: 20%; font-size: 18px; animation-delay: 6s; }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-18px); }
-        }
+       
 
         .container {
           max-width: 520px;
