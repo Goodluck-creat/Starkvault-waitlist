@@ -166,8 +166,7 @@ export default function Home() {
           content: "";
           position: absolute;
           inset: 0;
-          // background: rgba(0,0,0,0.6);
-          backdrop-filter: blur(2px);
+          
         }
 
         .banner-text {
