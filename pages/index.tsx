@@ -217,9 +217,7 @@ export default function Home() {
 
       <div className="bg">
         {/* Floating vault vibes */}
-        <div className="float one">🔒</div>
-        <div className="float two">📄</div>
-        <div className="float three">⛓️</div>
+       
 
         {/* HERO */}
         <div className="container">
